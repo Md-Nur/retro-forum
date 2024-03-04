@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReTro</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="tailwind.config.js"></script> -->
+  </head>
+  <body>
+    <nav class="navbar bg-base-100">
+      <div class="navbar-start">
+        <a class="btn btn-ghost text-xl"><img src="./images/logo.png" /></a>
+      </div>
+      <div class="navbar-end space-x-2">
+        <div class="tooltip tooltip-bottom hidden md:flex" data-tip="Home">
+          <button class="btn"><img src="./icons/home.svg" /></button>
+        </div>
+        <div class="tooltip tooltip-bottom hidden md:flex" data-tip="Edit">
+          <button class="btn"><img src="./icons/edit.svg" /></button>
+        </div>
+        <div class="tooltip tooltip-bottom hidden md:flex" data-tip="Account">
+          <button class="btn"><img src="./icons/acc.svg" /></button>
+        </div>
+        <div class="tooltip tooltip-bottom hidden md:flex" data-tip="Flag">
+          <button class="btn"><img src="./icons/flag.svg" /></button>
+        </div>
+        <button class="btn btn-primary">Sign In</button>
+      </div>
+    </nav>
+
+    <!-- Hero Section  -->
+
+    <div
+      class="hero h-[550px] w-auto m-10 bg-[#12132D] rounded-xl"
+      style="background-image: url(./images/bgbanner.png)"
+    >
+      <div
+        class="hero-content text-center text-neutral-content flex flex-col lg:flex-row justify-evenly"
+      >
+        <div class="max-w-md">
+          <h1 class="mb-5 text-5xl font-bold">
+            Welcome to the <span class="text-blue-800">ReTro</span> Forum
+          </h1>
+          <p class="mb-5">
+            Share your favorite opinion and win and wp forum coffee mug!
+          </p>
+          <div class="join">
+            <div>
+              <div>
+                <input
+                  class="input input-bordered join-item"
+                  placeholder="Search"
+                />
+              </div>
+            </div>
+            <div class="indicator">
+              <button class="btn join-item btn-primary">Search</button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-white text-black grid grid-cols-2 text-justify p-5 rounded gap-5 w-auto"
+        >
+          <div>Registered user</div>
+          <div>01</div>
+          <div>Forum</div>
+          <div>05</div>
+          <div>Topics</div>
+          <div>05</div>
+          <div>Replies</div>
+          <div>03</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lets Discuss Section  -->
+    <section class="text-center">
+      <h3 class="text-2xl font-bold">Let&apos;s Discuss</h3>
+      <p class="max-w-[700px] text-gray-500 mx-auto">
+        Yes, you can run unit tests and view the results directly within the
+        app. The integrated testing features allow for a streamlined .
+      </p>
+    </section>
+  </body>
+</html>
