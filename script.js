@@ -14,7 +14,7 @@ const allPosts = async () => {
     const post = data.posts[i];
     const postContainer = document.createElement("div");
     postContainer.classList =
-      "flex rounded-xl shadow-xl p-5 bg-gray-100 hover:bg-blue-50 w-full gap-5 m-5";
+      "flex rounded-xl shadow-xl p-5 bg-[#F3F3F5] hover:bg-[#797dfc1a] w-full gap-5 m-5 border-[#797dfc1a]-2";
 
     postContainer.innerHTML = `
   <div class="indicator">
