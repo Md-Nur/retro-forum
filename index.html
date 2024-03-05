@@ -30,7 +30,7 @@
         <div class="tooltip tooltip-bottom hidden md:flex" data-tip="Flag">
           <button class="btn"><img src="./icons/flag.svg" /></button>
         </div>
-        <button class="btn btn-primary">Sign In</button>
+        <button class="btn bg-blue-800 text-white font-bold">Sign In</button>
       </div>
     </nav>
 
@@ -60,7 +60,9 @@
               </div>
             </div>
             <div class="indicator">
-              <button class="btn join-item btn-primary">Search</button>
+              <button class="btn join-item bg-blue-800 text-white">
+                Search
+              </button>
             </div>
           </div>
         </div>
@@ -80,12 +82,83 @@
     </div>
 
     <!-- Lets Discuss Section  -->
-    <section class="text-center">
+    <section class="text-center m-5">
       <h3 class="text-2xl font-bold">Let&apos;s Discuss</h3>
       <p class="max-w-[700px] text-gray-500 mx-auto">
         Yes, you can run unit tests and view the results directly within the
         app. The integrated testing features allow for a streamlined .
       </p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 m-5 gap-5">
+        <div class="col-span-2">
+          <div
+            class="flex rounded-xl shadow-xl p-5 bg-gray-100 hover:bg-blue-50 w-full gap-5 flex-wrap"
+          >
+            <div class="avatar">
+              <div class="w-16 h-16 rounded-xl">
+                <img
+                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                />
+              </div>
+            </div>
+            <div class="text-justify space-y-3">
+              <p class="text-sm">
+                #Category &MediumSpace;<span>Author: Awlad Hossen</span>
+              </p>
+              <h3 class="font-bold text-justify">This is a title</h3>
+              <p class="text-sm text-gray-700">
+                This is a description about this title Lorem ipsum dolor sit
+                amet consectetur, adipisicing elit. Architecto consectetur
+                maiores magnam? Lorem ipsum doquae enim dolore. Nesciunt iusto,
+                fugit illum adipisci quod ab voluptatum sapiente corrupti rem!
+              </p>
+              <hr />
+              <div class="flex justify-between flex-wrap">
+                <div class="flex gap-3">
+                  <p
+                    class="flex gap-2 justify-center items-center text-gray-700"
+                  >
+                    <img src="./icons/comment.svg" />500
+                  </p>
+                  <p
+                    class="flex gap-2 justify-center items-center text-gray-700"
+                  >
+                    <img src="./icons/eye.svg" />1500
+                  </p>
+                  <p
+                    class="flex gap-2 justify-center items-center text-gray-700"
+                  >
+                    <img src="./icons/clock.svg" />50 min
+                  </p>
+                </div>
+                <button id="read"><img src="./icons/read.svg" /></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-200 rounded-xl p-5">
+          <div class="flex justify-between mb-5">
+            <h4 class="font-bold">Title</h4>
+            <p class="text-gray-700 flex justify-center items-center">
+              <img src="./icons/done.svg" />Mark as read <span>(4)</span>
+            </p>
+          </div>
+          <div
+            class="flex text-justify items-center gap-5 p-5 bg-white rounded-xl"
+          >
+            <h5 class="font-bold">
+              Titlelorem Lorem ipimpedit minima quisquam facere ad?icta.
+            </h5>
+            <p
+              class="flex gap-2 justify-center items-center text-gray-700 w-20"
+            >
+              <img src="./icons/eye.svg" />1500
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <script src="./script.js"></script>
   </body>
 </html>
