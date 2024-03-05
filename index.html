@@ -38,13 +38,13 @@
     <!-- Hero Section  -->
 
     <section
-      class="hero h-[550px] w-auto m-10 bg-[#12132D] rounded-xl"
+      class="hero min-h-[550px] w-auto m-10 bg-[#12132D] rounded-xl"
       style="background-image: url(./images/bgbanner.png)"
     >
       <div
-        class="text-neutral-content w-full flex flex-col lg:flex-row justify-evenly"
+        class="text-neutral-content w-full flex flex-col md:flex-row items-center justify-evenly p-5"
       >
-        <div class="max-w-md">
+        <div class="max-w-md flex items-center text-center md:items-start md:text-left flex-col">
           <h1 class="mb-5 text-2xl md:text-5xl font-bold">
             Welcome to the <span class="text-[#797DFC]">ReTro</span> Forum
           </h1>
@@ -52,12 +52,12 @@
             Share your favorite opinion and win and wp forum coffee mug!
           </p>
           <div class="rounded-full bg-white flex justify-between h-14 p-1 w-80">
-            <input placeholder="Search here anything" class="input h-11 bg-white focus:none" />
-            <button class="btn h-11 bg-[#797DFC] text-white">Search</button>
+            <input placeholder="Search here anything" class="input h-11 bg-white focus:none text-black" id="searchInpt"/>
+            <button class="btn h-11 bg-[#797DFC] text-white" id="searchBtn">Search</button>
           </div>
         </div>
         <div
-          class="bg-white text-black grid grid-cols-2 text-justify p-10 text-lg rounded-xl gap-5"
+          class="bg-white text-black grid grid-cols-2 text-justify p-10 text-lg rounded-xl gap-5 w-80 m-3"
         >
           <div>Registered user</div>
           <div class="text-right">01</div>

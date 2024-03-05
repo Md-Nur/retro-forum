@@ -4,12 +4,26 @@ const readingHistoryContainer = document.getElementById(
 );
 const readingCount = document.getElementById("readingCount");
 const latestPostContainer = document.getElementById("latestPostContainer");
+const searchBtn = document.getElementById("searchBtn");
+const searchInpt = document.getElementById("searchInpt");
 
-const allPosts = async () => {
-  let countOfReading = 0;
-  const url = "https://openapi.programming-hero.com/api/retro-forum/posts";
+let countOfReading = 0;
+const allPosts = async (category) => {
+  const url =
+    "https://openapi.programming-hero.com/api/retro-forum/posts" + category;
+
+  const loader = document.createElement("span");
+  loader.classList = "loading loading-bars loading-lg";
+  allPostsContainer.appendChild(loader);
+
+  const loadingTime = setTimeout(() => {
+    allPostsContainer.removeChild(loader);
+  }, 2000);
   const response = await fetch(url);
   const data = await response.json();
+  // allPostsContainer.removeChild(loader); // More efficient but out of rule
+
+
   for (let i = 0; i < data.posts.length; i++) {
     const post = data.posts[i];
     const postContainer = document.createElement("div");
@@ -60,7 +74,6 @@ const allPosts = async () => {
   </div>
         `;
     allPostsContainer.appendChild(postContainer);
-
     const readingButton = document.getElementById(`read${i}`);
     readingButton.addEventListener("click", () => {
       countOfReading++;
@@ -80,7 +93,13 @@ const allPosts = async () => {
   }
 };
 
-allPosts();
+allPosts("");
+
+searchBtn.addEventListener("click", async () => {
+  allPostsContainer.innerHTML = "";
+
+  allPosts("?category=" + searchInpt.value);
+});
 
 const latestPost = async () => {
   const url =
