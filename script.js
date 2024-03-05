@@ -28,7 +28,7 @@ const allPosts = async (category) => {
     const post = data.posts[i];
     const postContainer = document.createElement("div");
     postContainer.classList =
-      "flex rounded-xl shadow-xl p-5 bg-[#F3F3F5] hover:bg-[#797dfc1a] w-full gap-5 m-5 border-[#797dfc1a]-2";
+      "flex rounded-xl shadow-xl p-2 md:p-5 bg-[#F3F3F5] hover:bg-[#797dfc1a] w-full gap-5 m-2 md:m-5 border-[#797dfc1a]-2 flex-col sm:flex-row";
 
     postContainer.innerHTML = `
   <div class="indicator">
@@ -80,7 +80,7 @@ const allPosts = async (category) => {
       readingCount.innerHTML = countOfReading;
       const readingHistoryPost = document.createElement("div");
       readingHistoryPost.classList =
-        "flex text-justify items-center gap-5 p-5 bg-white rounded-xl my-3";
+        "flex text-justify items-center gap-5 p-2 md:p-5 bg-white rounded-xl my-3 flex-wrap sm:flex-nowrap";
       readingHistoryPost.innerHTML = `
     <h5 class="font-bold">${post.title}</h5>
     <p class="flex gap-2 justify-center items-center text-gray-700 w-20">
