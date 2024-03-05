@@ -3,7 +3,7 @@ const readingHistoryContainer = document.getElementById(
   "readingHistoryContainer"
 );
 const readingCount = document.getElementById("readingCount");
-let reading_count = 0;
+let countOfReading = 0;
 
 const allPosts = async () => {
   const url = "https://openapi.programming-hero.com/api/retro-forum/posts";
@@ -58,8 +58,8 @@ const allPosts = async () => {
 
     const readingButton = document.getElementById(`read${i}`);
     readingButton.addEventListener("click", () => {
-      reading_count++;
-      readingCount.innerHTML = reading_count;
+      countOfReading++;
+      readingCount.innerHTML = countOfReading;
       const readingHistoryPost = document.createElement("div");
       readingHistoryPost.classList =
         "flex text-justify items-center gap-5 p-5 bg-white rounded-xl my-3";
